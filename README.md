@@ -4,3 +4,6 @@ This Repository is for the code exercise for marketplacer role from [here](https
 #### Gems required for this to operate properly:
 - json (gem install json)
 - minitest (gem install minitest)
+
+#### Testing
+- for creation of individual product class, run the ruby script marketplacer_test.rb.
