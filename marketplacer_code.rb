@@ -25,6 +25,28 @@ def import_products
 		# initialize product class object then store into the product array
 		products << Product.new(item)
 	end
+
+	return products
 end
 
-import_products
+# Create method for the checkout so it would display the list of products and calculate the total. 
+def checkout
+	# add all the products into the shopping cart.
+	shopping_cart = import_products
+
+	# print the first line.
+	printf "\nProducts in the shopping cart:\n"
+	
+	# loop through the shopping to print the product and the price of the product. 
+	shopping_cart.each_with_index do |product, index|
+		printf "#{index+1}: #{product.name} - $#{product.price}\n"
+	end
+
+	# Generate The Total by Converting The Price To Float In The MAp Function Before Summing Up The Array That Was Produced By The Map.
+	total = shopping_cart.map{ |u| u.price.to_f }.sum
+
+	# print out the Total Price
+	printf "\nTotal Price: $#{total}\n\n"
+end
+
+checkout
