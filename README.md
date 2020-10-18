@@ -3,3 +3,4 @@ This Repository is for the code exercise for marketplacer role from [here](https
 
 #### Gems required for this to operate properly:
 - json (gem install json)
+- minitest (gem install minitest)
