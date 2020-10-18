@@ -1,7 +1,8 @@
 require "minitest/autorun"
 require_relative 'marketplacer_code'
+require_relative 'marketplacer_test'
 
-class MarketplacerTest < Minitest::Test
+class MarketplacerMultipleTest < Minitest::Test
     def setup
         product_hash = [
             {
@@ -49,5 +50,9 @@ class MarketplacerTest < Minitest::Test
 
     def test_second_price
         assert_equal "2.00", @products[1].price
+    end
+
+    def test_total
+        assert_equal 3.00, @products.map{ |u| u.price.to_f }.sum
     end
 end

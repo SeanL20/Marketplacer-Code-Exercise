@@ -1,5 +1,4 @@
 require "minitest/autorun"
-require_relative 'marketplacer_code'
 
 class MarketplacerTest < Minitest::Test
     def setup
